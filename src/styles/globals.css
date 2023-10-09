@@ -2,16 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Julee&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Aubrey&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 @layer base {
   html {
     font-family: 'Raleway', system-ui, sans-serif;
+    color: #333f72;
   }
   body {
-    background-color: blue;
+    background-color: #f3ede1;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: 'Nanum Brush Script', cursive;
+    text-transform: uppercase;
   }
 }

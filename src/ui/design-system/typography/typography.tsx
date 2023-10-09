@@ -14,17 +14,34 @@ export const Typography = ({ variant = "h3", children, component: Component = "d
   let variantStyle: string = "";
   switch (variant) {
     case "display":
-      variantStyle = "text-red-500";
+      variantStyle = "text-8xl";
       break;
 
     case "h1":
-      variantStyle = "text-green-500";
+      variantStyle = "text-8xl";
+      break;
+    case "h2":
+      variantStyle = "text-3xl";
+      break;
+    case "h3":
+      variantStyle = "text-xl";
+      break;
+    case "lead":
+      variantStyle = "text-lg";
+      break;
+    case "body-lg":
+      variantStyle = "text-lg";
+      break;
+    case "body-base": // default
+      variantStyle = "text-base";
       break;
   }
 
+
+
   return (
     <>
-      <Component className={clsx(variantStyle, weight === "medium" && "font-medium", className)}>{children}</Component>
+      <Component className={clsx(variantStyle, weight === "medium" && "font-medium", className, "text-8xl")}>{children}</Component>
     </>
   )
 }
