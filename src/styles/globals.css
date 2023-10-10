@@ -8,7 +8,6 @@
 @layer base {
   html {
     font-family: 'Raleway', system-ui, sans-serif;
-    color: #333f72;
   }
   body {
     background-color: #f3ede1;
@@ -16,9 +15,7 @@
   h1,
   h2,
   h3,
-  h4,
-  h5,
-  h6 {
+  h4 {
     font-family: 'Nanum Brush Script', cursive;
     text-transform: uppercase;
   }

@@ -7,7 +7,7 @@ export default function Home() {
     <>
       <Seo title='Miyabi House' description='Miyabi House' />
       <main>
-        <Typography variant="display" component="h1">
+        <Typography text="primary" variant="display" component="h1">
           Tastes the tradition of Japan
         </Typography>
       </main>

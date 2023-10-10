@@ -5,6 +5,24 @@ const config: Config = {
     "./src/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+
+    colors : {
+      "beige": "#f3EDE1",
+
+      "primary" : {
+        "100": "#CED0E6",
+        "200": "#4D577D",
+        "300": "#3D4B6F",
+        DEFAULT: "#333F72"
+      },
+      "secondary" : {
+        "100": "#FFE18B",        
+        "200": "#E5A00C",
+        "300": "#E58C0C",
+        DEFAULT: "#E56E0c"
+      },
+    },
+
     fontSize: {
       '8xl': ['5rem', {
         lineHeight: '5rem',
