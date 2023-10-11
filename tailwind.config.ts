@@ -111,6 +111,7 @@ const config: Config = {
       ],
     },
     borderRadius: {
+      full: '9999px',
       DEFAULT: '24px 0px', // Coin par défaut
     },
     extend: {},

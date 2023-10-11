@@ -13,6 +13,7 @@ export default function Home() {
         <Button size='lg' variant='disabled'>Order now</Button>
         <Button variant='beige'>Order now</Button>
         <Button variant='outline'>Outline</Button>
+        <Button size='xs' variant='icon'>Ic</Button>
       </div>
 
       <main>

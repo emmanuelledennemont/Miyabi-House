@@ -1,16 +1,18 @@
 import clsx from "clsx";
 
 interface ButtonProps {
-  variant?: "primary" | "secondary" | "beige" | "outline" | "disabled" | "link";
-  size?: "sm" | "md" | "lg";
+  variant?: "primary" | "secondary" | "beige" | "outline" | "disabled" | "icon";
+  size?: "xs" | "sm" | "md" | "lg";
   disabled?: boolean;
   isLoading?: boolean;
+  icon?: any;
+  icontheme?: "primary" | "secondary" | "beige";
   className?: string;
   children?: React.ReactNode;
 }
-export const Button = ({ variant = "primary", size = "md", disabled, isLoading, className, children }: ButtonProps) => {
+export const Button = ({ variant = "primary", size = "md", icon, icontheme = "primary", disabled, isLoading, className, children }: ButtonProps) => {
 
-  let variantStyle: string = "", sizeStyle: string = "";
+  let variantStyle: string = "", sizeStyle: string = "", iconSize: number = 0;
 
   switch (variant) {
     case "primary": // default
@@ -28,12 +30,15 @@ export const Button = ({ variant = "primary", size = "md", disabled, isLoading, 
     case "disabled":
       variantStyle = "bg-gray-200 border border-primary-300/50 text-primary rounded cursor-not-allowed";
       break;
-    case "link":
-      variantStyle = "bg-transparent text-primary";
+    case "icon":
+      variantStyle = "bg-transparent border text-primary rounded-full";
       break;
   }
 
   switch (size) {
+    case "xs":
+      sizeStyle = "w-10 h-10 text-caption4 font-medium";
+      break;
     case "sm":
       sizeStyle = "px-[32px] py-[10px] text-captation3 font-medium";
       break;
