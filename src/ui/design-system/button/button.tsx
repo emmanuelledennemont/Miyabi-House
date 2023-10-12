@@ -1,5 +1,6 @@
 import { IconProps } from "@/types/iconProps";
 import clsx from "clsx";
+import { Spinner } from "../spinner/spinner";
 
 interface ButtonProps {
   variant?: "primary" | "secondary" | "beige" | "outline" | "disabled" | "icon";
@@ -67,9 +68,16 @@ export const Button = ({ variant = "primary", size = "md", icon, icontheme = "pr
 
   return (
     <>
-      <button type="button" className={clsx(variantStyle, sizeStyle, iconSize, "")} onClick={() => console.log('click')} disabled={disabled}>
-        {icon && variant === "icon" ? <icon.icon size={iconSize} /> : <>{children}</>}
-      </button>
+      <button type="button" className={clsx(variantStyle, sizeStyle, iconSize, "", isLoading && "cursor-progress", "relative")} onClick={() => console.log('click')} disabled={disabled}>
+        {isLoading && (
+          < div className="absolute inset-0 flex items-center justify-center">
+            {variant === "primary" || variant === "icon" ? (<Spinner size="sm" variant="beige" />) : (<Spinner size="sm" />)}
+          </div>
+        )}
+        <div className={clsx(isLoading && "invisible")}>
+          {icon && variant === "icon" ? <icon.icon size={iconSize} /> : <>{children}</>}
+        </div>
+      </button >
 
     </>
   )
