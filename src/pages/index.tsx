@@ -1,5 +1,7 @@
 import { Seo } from '@/ui/components/seo'
+import { Avatar } from '@/ui/design-system/avatar/avatar'
 import { Button } from '@/ui/design-system/button/button'
+import { Logo } from '@/ui/design-system/logo/logo'
 import { Spinner } from '@/ui/design-system/spinner/spinner'
 import { Typography } from '@/ui/design-system/typography/typography'
 import { AiOutlineUser } from 'react-icons/ai'
@@ -24,6 +26,14 @@ export default function Home() {
       <Spinner size="sm" />
       <Spinner size="md" />
       <Spinner size="lg" />
+      <Logo size='lg' variant='secondary' />
+      <Logo size='md' />
+      <Logo size='sm' />
+      <Logo size='xs' />
+      <Avatar size='xs' src="/assets/images/avatarf.png" alt="Avatar de l'utilisateur" />
+      <Avatar size='sm' src="/assets/images/avatarf.png" alt="Avatar de l'utilisateur" />
+      <Avatar size='md' src="/assets/images/avatarf.png" alt="Avatar de l'utilisateur" />
+      <Avatar size='lg' src="/assets/images/avatarf.png" alt="Avatar de l'utilisateur" />
 
       <main>
         <Typography text="primary" variant="display" component="h1">
