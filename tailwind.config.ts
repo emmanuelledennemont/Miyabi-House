@@ -4,7 +4,10 @@ const config: Config = {
   content: ['./src/**/*.{js,ts,jsx,tsx,mdx}'],
   theme: {
     colors: {
-      beige: '#f3EDE1',
+      beigebg: {
+        '200': '#E9DAC6',
+        DEFAULT: '#f3EDE1', //Default
+      },
 
       primary: {
         '100': '#CED0E6',

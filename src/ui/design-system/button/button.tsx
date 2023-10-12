@@ -18,10 +18,10 @@ export const Button = ({ variant = "primary", size = "md", icon, icontheme = "pr
 
   switch (variant) {
     case "primary": // default
-      variantStyle = "bg-primary hover:bg-primary-200 text-beige rounded";
+      variantStyle = "bg-primary hover:bg-primary-200 text-beigebg rounded";
       break;
     case "secondary":
-      variantStyle = "bg-secondary hover:bg-secondary-300 text-beige rounded";
+      variantStyle = "bg-secondary hover:bg-secondary-300 text-beigebg rounded";
       break;
     case "beige":
       variantStyle = "bg-beige hover:bg-secondary-300/20 border boder-secondary text-secondary rounded";
@@ -34,10 +34,10 @@ export const Button = ({ variant = "primary", size = "md", icon, icontheme = "pr
       break;
     case "icon":
       if (icontheme === "primary") {
-        variantStyle = "bg-primary hover:bg-primary-200 text-beige rounded-full";
+        variantStyle = "bg-primary hover:bg-primary-200 text-beigebg rounded-full";
       }
       if (icontheme === "secondary") {
-        variantStyle = "bg-secondary hover:bg-secondary-300 text-beige rounded-full";
+        variantStyle = "bg-secondary hover:bg-secondary-300 text-beigebg rounded-full";
       }
       if (icontheme === "beige") {
         variantStyle = "bg-beige hover:bg-primary-300/20 border boder-primary text-primary rounded-full";
