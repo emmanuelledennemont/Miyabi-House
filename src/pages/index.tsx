@@ -1,6 +1,7 @@
 import { Seo } from '@/ui/components/seo'
 import { Button } from '@/ui/design-system/button/button'
 import { Typography } from '@/ui/design-system/typography/typography'
+import { AiOutlineUser } from 'react-icons/ai'
 
 
 export default function Home() {
@@ -13,7 +14,11 @@ export default function Home() {
         <Button size='lg' variant='disabled'>Order now</Button>
         <Button variant='beige'>Order now</Button>
         <Button variant='outline'>Outline</Button>
-        <Button size='xs' variant='icon'>Ic</Button>
+        <Button size='sm' variant='icon' icon={{ icon: AiOutlineUser }} icontheme='outline' />
+        <Button size='md' variant='icon' icon={{ icon: AiOutlineUser }} icontheme='secondary' />
+        <Button size='lg' variant='icon' icon={{ icon: AiOutlineUser }} icontheme='primary' />
+        <Button size='sm' variant='icon' icon={{ icon: AiOutlineUser }} icontheme='beige' />
+        <Button size='md' variant='icon' icon={{ icon: AiOutlineUser }} icontheme='social' />
       </div>
 
       <main>

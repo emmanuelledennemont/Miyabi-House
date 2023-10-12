@@ -1,3 +1,4 @@
+import { IconProps } from "@/types/iconProps";
 import clsx from "clsx";
 
 interface ButtonProps {
@@ -5,8 +6,8 @@ interface ButtonProps {
   size?: "xs" | "sm" | "md" | "lg";
   disabled?: boolean;
   isLoading?: boolean;
-  icon?: any;
-  icontheme?: "primary" | "secondary" | "beige";
+  icon?: IconProps;
+  icontheme?: "primary" | "secondary" | "beige" | "outline" | "social";
   className?: string;
   children?: React.ReactNode;
 }
@@ -31,30 +32,45 @@ export const Button = ({ variant = "primary", size = "md", icon, icontheme = "pr
       variantStyle = "bg-gray-200 border border-primary-300/50 text-primary rounded cursor-not-allowed";
       break;
     case "icon":
-      variantStyle = "bg-transparent border text-primary rounded-full";
+      if (icontheme === "primary") {
+        variantStyle = "bg-primary hover:bg-primary-200 text-beige rounded-full";
+      }
+      if (icontheme === "secondary") {
+        variantStyle = "bg-secondary hover:bg-secondary-300 text-beige rounded-full";
+      }
+      if (icontheme === "beige") {
+        variantStyle = "bg-beige hover:bg-primary-300/20 border boder-primary text-primary rounded-full";
+      }
+      if (icontheme === "outline") {
+        variantStyle = "bg-transparent text-primary";
+      }
+      if (icontheme === "social") {
+        variantStyle = "bg-tranparent hover:bg-primary-200/20 border border-beige text-beige rounded-full";
+      }
       break;
   }
 
   switch (size) {
-    case "xs":
-      sizeStyle = "w-10 h-10 text-caption4 font-medium";
-      break;
     case "sm":
-      sizeStyle = "px-[32px] py-[10px] text-captation3 font-medium";
+      sizeStyle = `text-captation3 font-medium ${variant === "icon" ? "flex items-center justify-center w-[40px] h-[40px]" : "px-[32px] py-[11px]"}`;
+      iconSize = 24;
       break;
     case "md": // default
-      sizeStyle = "px-[40px] py-[13px] text-caption2 font-medium";
+      sizeStyle = `text-caption2 font-medium ${variant === "icon" ? "flex items-center justify-center w-[50px] h-[50px]" : "px-[40px] py-[13px]"}`;
+      iconSize = 28;
       break;
     case "lg":
-      sizeStyle = "px-[48px] py-[15px] text-caption1 font-medium";
+      sizeStyle = `text-caption1 font-medium ${variant === "icon" ? "flex items-center justify-center w-[60px] h-[60px]" : "px-[48px] py-[15px]"} `;
+      iconSize = 32;
       break;
   }
 
   return (
     <>
-      <button type="button" className={clsx(variantStyle, sizeStyle, "")} onClick={() => console.log('click')} disabled={disabled}>
-        {children}
+      <button type="button" className={clsx(variantStyle, sizeStyle, iconSize, "")} onClick={() => console.log('click')} disabled={disabled}>
+        {icon && variant === "icon" ? <icon.icon size={iconSize} /> : <>{children}</>}
       </button>
+
     </>
   )
 } 
