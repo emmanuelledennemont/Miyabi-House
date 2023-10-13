@@ -1,8 +1,9 @@
-import clsx from "clsx";
 import { Logo } from "@/ui/design-system/logo/logo";
 import { Container } from "../container/container";
 import { Typography } from "@/ui/design-system/typography/typography";
 import { Button } from "@/ui/design-system/button/button";
+import Link from "next/link";
+import { ActiveLink } from "./active-link";
 
 interface NavigationProps {
 }
@@ -18,11 +19,11 @@ export const Navigation = ({ }: NavigationProps) => {
         </div>
 
         <div className="order-first -mx-4 flex flex-auto basis-full overflow-x-auto whitespace-nowrap py-4 sm:-mx-6 lg:order-none lg:mx-0 lg:basis-auto lg:border-0 lg:py-0 justify-center">
-          <Typography variant="caption-3" className="mx-auto flex items-center gap-10 px-4">
-            <span className="text-secondary">Home</span>
-            <span>Menu</span>
-            <span>About</span>
-            <span>Sessions</span>
+          <Typography variant="caption-3" className="mx-auto flex items-center gap-10 px-4 cursor-pointer">
+            <ActiveLink href="/">Home</ActiveLink>
+            <ActiveLink href="/designsystem">Menu</ActiveLink>
+            <ActiveLink href="/about">About</ActiveLink>
+            <ActiveLink href="/sessions">Sessions</ActiveLink>
           </Typography>
         </div>
 
@@ -31,8 +32,6 @@ export const Navigation = ({ }: NavigationProps) => {
         </div>
       </Container>
     </div>
-
-
 
   );
 }

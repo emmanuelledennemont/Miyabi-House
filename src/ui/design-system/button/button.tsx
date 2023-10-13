@@ -68,7 +68,7 @@ export const Button = ({ variant = "primary", size = "md", icon, icontheme = "pr
 
   return (
     <>
-      <button type="button" className={clsx(variantStyle, sizeStyle, iconSize, "", isLoading && "cursor-progress", "relative")} onClick={() => console.log('click')} disabled={disabled}>
+      <button type="button" className={clsx(variantStyle, sizeStyle, iconSize, "", isLoading && "cursor-wait", "relative animate-nav")} onClick={() => console.log('click')} disabled={disabled}>
         {isLoading && (
           < div className="absolute inset-0 flex items-center justify-center">
             {variant === "primary" || variant === "icon" ? (<Spinner size="sm" variant="beige" />) : (<Spinner size="sm" />)}
