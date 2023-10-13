@@ -3,12 +3,12 @@ import clsx from "clsx";
 import { Spinner } from "../spinner/spinner";
 
 interface ButtonProps {
-  variant?: "primary" | "secondary" | "beige" | "outline" | "disabled" | "icon";
+  variant?: "primary" | "secondary" | "beigebg" | "outline" | "disabled" | "icon";
   size?: "xs" | "sm" | "md" | "lg";
   disabled?: boolean;
   isLoading?: boolean;
   icon?: IconProps;
-  icontheme?: "primary" | "secondary" | "beige" | "outline" | "social";
+  icontheme?: "primary" | "secondary" | "beigebg" | "outline" | "social";
   className?: string;
   children?: React.ReactNode;
 }
@@ -23,8 +23,8 @@ export const Button = ({ variant = "primary", size = "md", icon, icontheme = "pr
     case "secondary":
       variantStyle = "bg-secondary hover:bg-secondary-300 text-beigebg rounded";
       break;
-    case "beige":
-      variantStyle = "bg-beige hover:bg-secondary-300/20 border boder-secondary text-secondary rounded";
+    case "beigebg":
+      variantStyle = "bg-beigebg hover:bg-secondary-300/20 border boder-secondary text-secondary rounded";
       break;
     case "outline":
       variantStyle = "bg-primary-100 border border-primary-300 text-primary rounded";
@@ -39,14 +39,14 @@ export const Button = ({ variant = "primary", size = "md", icon, icontheme = "pr
       if (icontheme === "secondary") {
         variantStyle = "bg-secondary hover:bg-secondary-300 text-beigebg rounded-full";
       }
-      if (icontheme === "beige") {
-        variantStyle = "bg-beige hover:bg-primary-300/20 border boder-primary text-primary rounded-full";
+      if (icontheme === "beigebg") {
+        variantStyle = "bg-beigebg hover:bg-primary-300/20 border boder-primary text-primary rounded-full";
       }
       if (icontheme === "outline") {
         variantStyle = "bg-transparent text-primary";
       }
       if (icontheme === "social") {
-        variantStyle = "bg-tranparent hover:bg-primary-200/20 border border-beige text-beige rounded-full";
+        variantStyle = "bg-primary hover:bg-primary-200 border border-beigebg-200/30 text-beigebg rounded-full";
       }
       break;
   }

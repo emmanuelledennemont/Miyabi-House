@@ -3,7 +3,7 @@ import clsx from "clsx";
 interface TypographyProps {
   variant?: "display" | "h1" | "h2" | "h3" | "h4" | "h5" | "lead" | "body-base" | "body-lg" | "body-sm" | "caption" | "caption-1" | "caption-2" | "caption-3" | "caption-4";
   component?: "h1" | "h2" | "h3" | "h4" | "h5" | "div" | "span" | "p" | "label" | "caption";
-  text?: "beige" | "primary" | "secondary";
+  text?: "beigebg" | "primary" | "secondary";
   weight?: "light" | "regular" | "medium" | "bold";
   className?: string;
   children: React.ReactNode;
@@ -50,8 +50,8 @@ export const Typography = ({ variant = "h3", children, component: Component = "d
   }
 
   switch (text) {
-    case "beige":
-      colorStyle = "text-beige";
+    case "beigebg":
+      colorStyle = "text-beigebg";
       break;
     case "primary": // default
       colorStyle = "text-primary";

@@ -1,6 +1,6 @@
 interface LogoProps {
   size?: 'xs' | 'sm' | 'md' | 'lg';
-  variant?: "primary" | "secondary" | "beige";
+  variant?: "primary" | "secondary" | "beigebg";
 }
 
 export const Logo = ({ size = 'md', variant = "primary" }: LogoProps) => {
@@ -28,8 +28,8 @@ export const Logo = ({ size = 'md', variant = "primary" }: LogoProps) => {
     case "secondary":
       variantStyle = "text-secondary";
       break;
-    case "beige":
-      variantStyle = "text-beige";
+    case "beigebg":
+      variantStyle = "text-beigebg";
       break;
   }
 

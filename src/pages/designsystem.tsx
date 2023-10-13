@@ -18,18 +18,20 @@ export default function DesignSystem() {
           <Button size='sm' variant='secondary'>Order now</Button>
           <Button isLoading size='md' variant='primary'>Order now</Button>
           <Button size='lg' variant='disabled'>Order now</Button>
-          <Button variant='beige'>Order now</Button>
+          <Button variant='beigebg'>Order now</Button>
           <Button variant='outline'>Outline</Button>
           <Button size='sm' variant='icon' icon={{ icon: AiOutlineUser }} icontheme='outline' />
           <Button size='md' variant='icon' icon={{ icon: AiOutlineUser }} icontheme='secondary' />
           <Button size='lg' variant='icon' icon={{ icon: AiOutlineUser }} icontheme='primary' />
-          <Button size='sm' variant='icon' icon={{ icon: AiOutlineUser }} icontheme='beige' />
+          <Button size='sm' variant='icon' icon={{ icon: AiOutlineUser }} icontheme='beigebg' />
           <Button size='md' variant='icon' icon={{ icon: AiOutlineUser }} icontheme='social' />
         </div>
         <Spinner size="sm" />
         <Spinner size="md" />
         <Spinner size="lg" />
         <Logo size='lg' variant='secondary' />
+        <Logo size='lg' variant='primary' />
+        <Logo size='lg' variant='beigebg' />
         <Logo size='md' />
         <Logo size='sm' />
         <Logo size='xs' />

@@ -16,7 +16,7 @@ export const ActiveLink = ({ href, children }: ActiveLinkProps) => {
   }, [router.pathname, href]);
 
   return (
-    <Link href={href} className={clsx(isActive && "text-secondary font-medium")}>
+    <Link href={href} className={clsx(isActive && "text-secondary")}>
       {children}
     </Link>
   );
