@@ -3,18 +3,19 @@ import { Button } from "@/ui/design-system/button/button";
 import { Logo } from "@/ui/design-system/logo/logo";
 import { Typography } from "@/ui/design-system/typography/typography";
 import { AiOutlineUser } from "react-icons/ai";
-import { homeAppLink } from "./app-links";
+import { footerLinks, homeAppLink } from "./app-links";
 import { v4 as uuidv4 } from 'uuid';
 import { ActiveLink } from "./active-link";
-import { link } from "fs";
+import { AppLinks, FooterLinks } from "@/types/app-links";
 
 export const Footer = () => {
 
   const currentYear = new Date().getFullYear();
 
-  const navigationLinks = homeAppLink.map((link) => (
-    <div key={uuidv4()}>{link.label}</div>
-
+  const footerNavigationList = footerLinks.map((columnLinks) => (
+    <div key={uuidv4()} className="flex flex-col items-start gap-5">
+      <FooterLink data={columnLinks} />
+    </div>
   ));
 
   return (
@@ -25,7 +26,7 @@ export const Footer = () => {
             <Logo size='lg' variant='beigebg' />
           </div>
           <div className="">
-            <FooterLink />
+
           </div>
         </Container>
         <Container className="pt-9 pb-11 space-y-10">
@@ -49,9 +50,13 @@ export const Footer = () => {
 
 };
 
-const FooterLink = () => {
+interface footerLinkProps {
+  data: FooterLinks;
+}
 
-  const linkList = homeAppLink.map((link) => (
+const FooterLink = ({ data }: footerLinkProps) => {
+
+  const linksList = data.links.map((link) => (
     <div key={uuidv4()}>{link.type === "internal" && (
       <ActiveLink href={link.href}>{link.label}</ActiveLink>
     )}
@@ -61,7 +66,6 @@ const FooterLink = () => {
         </a>
       )}
     </div>
-
   ));
 
   return (
@@ -72,15 +76,17 @@ const FooterLink = () => {
           variant="caption-2"
           weight="medium"
           className="pb-5"
-        >   Titre
+        >
+          {data.title}
         </Typography>
+
 
         <Typography
           text="beigebg"
           variant="caption-3"
           className="space-y-4"
         >
-          {linkList}
+          {linksList}
         </Typography>
       </div>
     </>

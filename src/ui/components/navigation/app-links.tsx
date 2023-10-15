@@ -1,4 +1,5 @@
 import { AppLinks } from "@/types/app-links";
+import { title } from "process";
 
 export const homeAppLink: AppLinks[] = [
   {
@@ -10,7 +11,7 @@ export const homeAppLink: AppLinks[] = [
 
   {
     label: 'Menu',
-    href: '/',
+    href: '/designsystem',
     type: 'internal'
   },
 
@@ -27,7 +28,7 @@ export const homeAppLink: AppLinks[] = [
   },
 ]
 
-const menuAppLink: AppLinks[] = [
+export const menuAppLink: AppLinks[] = [
   {
     label: 'Sushi',
     href: '/',
@@ -185,5 +186,31 @@ const socialAppLink: AppLinks[] = [
     label: 'Github',
     href: 'https://github.com',
     type: 'external'
+  },
+]
+
+export const footerLinks = [
+  {
+    title: 'App',
+    links: homeAppLink,
+  },
+
+  {
+    title: 'Menu',
+    links: menuAppLink,
+  },
+  {
+    title: 'About',
+    links: aboutAppLink,
+  },
+
+  {
+    title: 'Sessions',
+    links: sessionsAppLink,
+  },
+
+  {
+    title: 'Social',
+    links: socialAppLink,
   },
 ]
