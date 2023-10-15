@@ -25,8 +25,8 @@ export const Footer = () => {
           <div className="flex flex-col items-center">
             <Logo size='lg' variant='beigebg' />
           </div>
-          <div className="">
-
+          <div className=" flex gap-7">
+            {footerNavigationList}
           </div>
         </Container>
         <Container className="pt-9 pb-11 space-y-10">
