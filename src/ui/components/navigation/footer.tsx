@@ -3,10 +3,11 @@ import { Button } from "@/ui/design-system/button/button";
 import { Logo } from "@/ui/design-system/logo/logo";
 import { Typography } from "@/ui/design-system/typography/typography";
 import { AiOutlineUser } from "react-icons/ai";
-import { footerLinks, homeAppLink } from "./app-links";
+import { footerLinks } from "./app-links";
 import { v4 as uuidv4 } from 'uuid';
 import { ActiveLink } from "./active-link";
-import { AppLinks, FooterLinks } from "@/types/app-links";
+import { FooterLinks } from "@/types/app-links";
+import { LinkTypes } from "@/lib/link-type";
 
 export const Footer = () => {
 
@@ -57,10 +58,10 @@ interface footerLinkProps {
 const FooterLink = ({ data }: footerLinkProps) => {
 
   const linksList = data.links.map((link) => (
-    <div key={uuidv4()}>{link.type === "internal" && (
+    <div key={uuidv4()}>{link.type === LinkTypes.INTERNAL && (
       <ActiveLink href={link.href}>{link.label}</ActiveLink>
     )}
-      {link.type === "external" && (
+      {link.type === LinkTypes.EXTERNAL && (
         <a href={link.href} target="_blank">
           {link.label}
         </a>
@@ -79,7 +80,6 @@ const FooterLink = ({ data }: footerLinkProps) => {
         >
           {data.title}
         </Typography>
-
 
         <Typography
           text="beigebg"
