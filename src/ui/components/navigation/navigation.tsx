@@ -27,7 +27,7 @@ export const Navigation = ({ }: NavigationProps) => {
         </div>
 
         <div className="sm:mt-10 sm:flex lg:mt-0 lg:grow lg:basis-0 lg:justify-end gap-3 justify-center">
-          <Button size="sm" className="inline-flex justify-center">Order Now</Button>
+          <Button size="sm" className="inline-flex justify-center ">Order Now</Button>
         </div>
       </Container>
     </div>

@@ -8,6 +8,7 @@ import { v4 as uuidv4 } from 'uuid';
 import { ActiveLink } from "./active-link";
 import { FooterLinks } from "@/types/app-links";
 import { LinkTypes } from "@/lib/link-type";
+import { SocialButton } from "./social-button";
 
 export const Footer = () => {
 
@@ -36,14 +37,10 @@ export const Footer = () => {
             <Typography variant="caption-4" className="flex items-center gap-10 px-4 cursor-pointer  text-primary-100/30 ">
               Coded by Manue  |  @{currentYear} - Miyabi House. All Rights Reserved
             </Typography>
-            <div className="flex flex-row gap-2">
-              <Button size='md' variant='icon' icon={{ icon: AiOutlineUser }} icontheme='social' />
-              <Button size='md' variant='icon' icon={{ icon: AiOutlineUser }} icontheme='social' />
-              <Button size='md' variant='icon' icon={{ icon: AiOutlineUser }} icontheme='social' />
-              <Button size='md' variant='icon' icon={{ icon: AiOutlineUser }} icontheme='social' />
+            <div className="">
+              <SocialButton />
             </div>
           </div>
-
         </Container >
       </div >
     </>
@@ -80,6 +77,7 @@ const FooterLink = ({ data }: footerLinkProps) => {
         >
           {data.title}
         </Typography>
+
 
         <Typography
           text="beigebg"

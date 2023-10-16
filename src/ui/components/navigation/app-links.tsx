@@ -1,5 +1,8 @@
 import { AppLinks } from "@/types/app-links";
-import { title } from "process";
+import { BsInstagram } from "react-icons/bs";
+import { FaTwitter } from "react-icons/fa";
+import { FiFacebook, FiGithub } from "react-icons/fi";
+
 
 export const homeAppLink: AppLinks[] = [
   {
@@ -162,30 +165,34 @@ const sessionsAppLink: AppLinks[] = [
   },
 ]
 
-const socialAppLink: AppLinks[] = [
+export const socialAppLink: AppLinks[] = [
   {
     label: 'Twitter',
     href: 'https://twitter.com/?lang=fr',
-    type: 'external'
+    type: 'external',
+    icon: FaTwitter,
 
   },
 
   {
     label: 'Facebook',
     href: 'https://www.facebook.com/',
-    type: 'external'
+    type: 'external',
+    icon: FiFacebook,
   },
 
   {
     label: 'Instagram',
     href: 'https://www.instagram.com/?hl=fr',
-    type: 'external'
+    type: 'external',
+    icon: BsInstagram,
   },
 
   {
     label: 'Github',
     href: 'https://github.com',
-    type: 'external'
+    type: 'external',
+    icon: FiGithub,
   },
 ]
 
