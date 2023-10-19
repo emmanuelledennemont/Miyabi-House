@@ -3,8 +3,7 @@ import { Button } from '@/ui/design-system/button/button';
 import { Typography } from '@/ui/design-system/typography/typography';
 import Image from 'next/image';
 
-const heroContent =
-{
+const heroContent = {
   text: {
     title: 'TASTES THE TRADITION OF JAPAN',
     description:
@@ -12,11 +11,11 @@ const heroContent =
     button: 'Order Now',
   },
   image: {
-    img1: "/assets/svg/hero.svg",
-    img2: "/assets/svg/Group 20.svg",
-    img3: "/assets/svg/Group 8.svg",
+    img1: '/assets/svg/hero.svg',
+    img2: '/assets/svg/Group 20.svg',
+    img3: '/assets/svg/Group 8.svg',
   },
-}
+};
 
 export const HeroTopView = () => {
   return (
@@ -101,61 +100,119 @@ export const HeroTopView = () => {
     //   </div>
     // </Container >
     <>
-
       <Container className="py-20 relative">
-        <div className="px-4 mx-auto ">
+        <div className="px-4 mx-auto">
           <Image
             src={heroContent.image.img2}
             alt="illustration soupe ramen illustration sushi baguettes et spécialités japonaises"
-            width={250}
-            height={250}
-            className="object-cover absolute top-[90px] left-[-110px] -z-40"
+            width={290}
+            height={290}
+            className="object-cover absolute top-[-10px] left-[-110px] -z-40"
             priority
           />
-          <div className="lg:flex items-center justify-between">
+          <div className="lg:flex items-center justify-between gap-[20px] ">
             <div className="lg:w-6/12 mb-10 lg:mb-0">
-              <Typography variant="h1" component="h1" className="text-4xl lg:text-5xl mb-5">
+              <Typography
+                variant="h1"
+                component="h1"
+                className="text-4xl lg:text-5xl mb-6"
+              >
                 {heroContent.text.title}
               </Typography>
-              <Typography variant="body-base" component="p" className="mb-10 leading-relaxed">
+              <Typography
+                variant="body-base"
+                component="p"
+                className="mb-10 leading-relaxed"
+              >
                 {heroContent.text.description}
               </Typography>
               <Button size="lg" variant="secondary" className="mx-auto">
                 {heroContent.text.button}
               </Button>
             </div>
-            <div className="lg:w-6/12 space-y-2 p-10">
-              <div className="flex space-x-2 items-stretch">
+            <div className="lg:w-6/12 space-y-2">
+              <div className="flex space-x-2 items-stretch justify-end">
                 <div className="w-7/12">
                   {heroContent.image.img1 && (
                     <Image
                       src={heroContent.image.img1}
                       alt="illustration soupe ramen avec truffe"
-                      width={397}
-                      height={406}
-                      className="object-cover h-full w-full bg-beigebg-200 p-6 rounded rounded-4xl"
+                      width={297}
+                      height={206}
+                      className="h-full w-full max-w-xl p-3 bg-beigebg-200 rounded rounded-4xl"
                       priority
                     />
                   )}
                 </div>
                 <div className="w-4/12 self-end space-y-2">
                   <div className="grid grid-cols-2 gap-2">
-
+                    {heroContent.image.img3 && (
+                      <Image
+                        src={heroContent.image.img3}
+                        alt="illustration sushi baguettes et spécialités japonaises"
+                        width={230}
+                        height={230}
+                        className="object-cover h-full w-full bg-primary-100/80 p-3 rounded rounded-2xl"
+                        priority
+                      />
+                    )}
+                    <div className="bg-secondary/80 rounded-tr-[200px] rounded-2xl"></div>
                   </div>
+                  {heroContent.image.img3 && (
+                    <Image
+                      src={heroContent.image.img3}
+                      alt="illustration sushi baguettes et spécialités japonaises"
+                      width={380}
+                      height={380}
+                      className="object-cover h-full w-full bg-primary-100/80 p-3 rounded rounded-2xl"
+                      priority
+                    />
+                  )}
+
                   <Image
                     src={heroContent.image.img3}
                     alt="illustration sushi baguettes et spécialités japonaises"
                     width={230}
                     height={230}
-                    className="object-cover absolute top-[30px] right-[-128px] -z-40 items-end"
+                    className="object-cover absolute top-[320px] right-[-96px] -z-40 items-end"
                     priority
                   />
+                </div>
+              </div>
+
+              <div className="flex space-x-2 items-stretch justify-end">
+                <div className="w-4/12">
+                  <div className="grid grid-cols-2 gap-2">
+                    <div className="bg-secondary/80 rounded-bl-[200px] rounded-2xl"></div>
+                    {heroContent.image.img3 && (
+                      <Image
+                        src={heroContent.image.img3}
+                        alt="illustration sushi baguettes et spécialités japonaises"
+                        width={230}
+                        height={230}
+                        className="object-cover h-full w-full bg-primary-100/80 p-3 rounded rounded-2xl"
+                        priority
+                      />
+                    )}
+                  </div>
+                </div>
+                <div className="w-7/12 h-[130px]">
+                  {heroContent.image.img1 && (
+                    <Image
+                      src={heroContent.image.img3}
+                      alt="illustration sushi baguettes et spécialités japonaises"
+                      width={230}
+                      height={230}
+                      className="object-cover h-full w-full bg-primary-100/80 p-3 rounded rounded-2xl"
+                      priority
+                    />
+
+                  )}
                 </div>
               </div>
             </div>
           </div>
         </div>
-
       </Container>
     </>
   );
