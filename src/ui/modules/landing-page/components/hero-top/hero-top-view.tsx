@@ -111,7 +111,7 @@ export const HeroTopView = () => {
             alt="illustration soupe ramen illustration sushi baguettes et spécialités japonaises"
             width={300}
             height={290}
-            className="object-cover absolute top-[320px] left-[-110px] -z-40"
+            className="object-cover absolute top-[120px] left-[-110px] -z-40"
             priority
           />
           <div className="lg:flex justify-between gap-[20px] ">
@@ -194,7 +194,7 @@ export const HeroTopView = () => {
                     alt="illustration sushi baguettes et spécialités japonaises"
                     width={230}
                     height={230}
-                    className="object-cover absolute top-[320px] right-[-96px] -z-40 items-end"
+                    className="object-cover absolute top-[150px] right-[-96px] -z-40 items-end"
                     priority
                   />
                 </div>
