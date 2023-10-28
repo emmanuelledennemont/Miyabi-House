@@ -16,10 +16,10 @@ export const SpecialitiesPart = () => {
   return (<div className="">
 
     <Container className='py-20 relative mt-10'>
-      <div className=" grid grid-cols-12 gap-6">
-        <div className="col-span-8 bg-secondary-200/80 h-96 rounded">Hello</div>
-        <div className="col-span-4 bg-secondary-200/40 h-96 rounded"></div>
-
+      <div className=" grid grid-row-2 grid-cols-3 gap-6 w-full h-96">
+        <div className="row-span-2 col-span-2  bg-secondary-200/80 h-full rounded">Hello</div>
+        <div className="col-span-1 bg-secondary-200/40 rounded h-full"></div>
+        <div className="col-span-1 bg-secondary-200/40 rounded h-full"></div>
       </div>
     </Container>
   </div>)
