@@ -110,7 +110,7 @@ export const HeroTopView = () => {
             src={heroContent.image.img2}
             alt="illustration soupe ramen illustration sushi baguettes et spécialités japonaises"
             width={300}
-            height={290}
+            height={300}
             className="object-cover absolute top-[120px] left-[-110px] -z-40"
             priority
           />
@@ -130,7 +130,7 @@ export const HeroTopView = () => {
               >
                 {heroContent.text.description}
               </Typography>
-              <Button size="lg" variant="secondary" className="mx-auto">
+              <Button size="lg" variant='secondary' className="mx-auto">
                 {heroContent.text.button}
               </Button>
 

@@ -7,7 +7,20 @@
 
 @layer base {
   html {
-    font-family: 'Raleway', system-ui, sans-serif;
+    font-family:
+      'Raleway',
+      sans-serif,
+      system-ui,
+      -apple-system,
+      BlinkMacSystemFont,
+      'Segoe UI',
+      Roboto,
+      Oxygen,
+      Ubuntu,
+      Cantarell,
+      'Open Sans',
+      'Helvetica Neue',
+      sans-serif;
   }
   body {
     background-color: #f3ede1;
