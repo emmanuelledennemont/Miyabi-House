@@ -11,7 +11,7 @@ const SpecialitiesData = [
 
 export const SpecialitiesPart = () => {
 
-  const SpecialitiesList = ""
+
 
   return (<div className="">
 

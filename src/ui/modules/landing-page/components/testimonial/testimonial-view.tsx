@@ -2,7 +2,6 @@ import { Container } from "@/ui/components/container/container";
 
 export const TestimonialPart = () => {
 
-  const TestimonialList = ""
 
   return (<div className="bg-beigebg-200/30">
 
