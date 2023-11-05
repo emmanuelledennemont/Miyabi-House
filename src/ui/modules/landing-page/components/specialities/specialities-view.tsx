@@ -42,19 +42,19 @@ const specialitiesData: SpecialitiesInterface[] = [
 export const SpecialitiesPart = () => {
   const specialitiesList = specialitiesData.map((speciality) => (
 
-    <Card key={uuidv4()} size="sm" variant='beigebg'>
-      <div className="flex items-center justify-center h-[200px] max-h-60 m-8">
+    <Card key={uuidv4()} size="xs" variant='beigebg'>
+      <div className="flex items-center justify-center h-[220px] max-h-50 m-6">
         <Image
           src={speciality.img}
           alt={speciality.alt}
-          width={230}
-          height={230}
-          className="object-cover  max-h-full max-w-full m-6 "
+          width={200}
+          height={200}
+          className="object-cover max-h-full max-w-full m-auto "
           priority
         />
       </div>
       <div className="flex justify-between px-6 mb-6">
-        <Typography variant="lead" component="h3" weight="medium">
+        <Typography variant="body-lg" component="h3" weight="bold">
           {speciality.title}
         </Typography>
         <Typography variant="body-base" component="p" weight="regular">
@@ -72,13 +72,14 @@ export const SpecialitiesPart = () => {
 
   return (
     <Container className='py-20 relative mt-10'>
-      <div className="grid grid-cols-12 grid-row-2 gap-x-16 gap-y-6 py-6">
-        <div className="row-span-2 grid grid-cols-2 col-span-7 gap-6">
+      <div className="grid grid-cols-12 grid-row-2 gap-x-20 gap-y-6 py-6">
+        <div className="row-span-8 grid grid-cols-2 col-span-6 gap-6">
           {specialitiesList}
         </div>
-        <div className="col-span-5 bg-secondary-200/40 rounded h-full">hey</div>
-        <div className="col-span-5 bg-secondary-200/40 rounded h-full">hey</div>
+        <div className="grid grid-cols-2 gap-6 col-span-6">
+          <div className="col-span-5 bg-beigebg-200/30 rounded h-full">hey</div>
+          <div className="col-span-5 bg-beigebg-200/30 rounded h-full">hey</div></div>
       </div>
-    </Container>
+    </Container >
   );
 };

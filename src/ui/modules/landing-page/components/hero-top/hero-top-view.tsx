@@ -210,18 +210,18 @@ export const HeroTopView = () => {
                         alt="illustration sushi baguettes et spécialités japonaises"
                         width={230}
                         height={230}
-                        className="object-cover h-full w-full bg-primary-100/80 p-3 rounded rounded-2xl"
+                        className="object-cover h-full w-full bg-primary-100/80 p-0 rounded rounded-2xl"
                         priority
                       />
                     )}
                   </div>
                 </div>
-                <div className="w-2/12">
+                <div className="w-2/12 max-h-[114px]">
                   {heroContent.image.img6 && (
                     <Image
                       src={heroContent.image.img6}
                       alt="illustration sushi baguettes et spécialités japonaises"
-                      width={220}
+                      width={200}
                       height={200}
                       className="object-cover max-h-full max-w-full bg-beigebg-200  p-0 rounded rounded-2xl"
                       priority
