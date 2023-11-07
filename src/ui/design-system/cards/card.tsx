@@ -31,7 +31,7 @@ export const Card = ({
       variantStyle = 'bg-transparent text-beigebg rounded';
       break;
     case 'secondary':
-      variantStyle = 'bg-secondary text-beigebg rounded';
+      variantStyle = 'bg-beigebg text-primary border border-primary rounded';
       break;
     case 'beigebg':
       variantStyle =
